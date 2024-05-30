@@ -30,6 +30,26 @@
       display: grid;
       grid-template-columns: 1fr 2fr;
       gap: 10px;
+      grid-template-areas: 
+      "one one"
+      "two three"
+      ". four";
+
+    }
+    .one {
+      grid-area: one;
+    }
+
+    .two {
+      grid-area: two;
+    }
+
+    .three {
+      grid-area: three;
+    }
+
+    .four {
+      grid-area: four;
     }
   </style>
 

@@ -16,9 +16,17 @@
       margin: 0;
     }
 
+    .container {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+    }
+
     .card {
       display: grid;
       grid-template-rows: 200px min-content;
+      display: flex;
+      flex-direction: column;
     }
 
     .card>img {
@@ -31,6 +39,8 @@
       margin: 0;
       padding: 0;
       list-style: none;
+      display: flex;
+      justify-content: center;
     }
 
     .tags>* {
