@@ -8,20 +8,26 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            margin: 0;
+            margin: 0 auto;
             padding: 0;
             display: flex;
-            justify-content: center;
+            flex-direction: column;
+            justify-content: space-around;
             align-items: center;
             height: 100vh;
+            
             background-color: hsl(220 7% 8%);
         }
 
         .board {
-            border: 1px solid orange; /** Elimina este borde cuando consigas el Ejercicio 1*/
+            border: 1px solid orange;
+            /** Elimina este borde cuando consigas el Ejercicio 1*/
 
             /** Ejercicio 1: Aplica adecuadamente display:grid en este cotenedor para crear una rejilla de exactamente 6 filas y 5 columnas. Vas a necesitar añadir 4 propiedades en total*/
-        
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            grid-template-rows: repeat(6,70px);
+
         }
 
         .board__tile {
@@ -34,6 +40,31 @@
             width: 62.5px;
             color: white;
             border: 1px solid white;
+        }
+
+        .keyboard {
+            padding: 10px;
+            max-width: 700px;
+
+            /* Ejercicio 2: Usa adecuadamete display:flex para distribuir las teclas sobre un contenedor flexible y se adapten al ancho del dispositivo (mínimo 375px, máximo la pantalla de un portátil) */
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 6px;
+
+        }
+
+        .keyboard__key {
+            display: inline-block;
+            width: 40px;
+            padding: 0.2rem;
+            line-height: 40px;
+            text-align: center;
+            background-color: #ddd;
+            border-radius: 8px;
+            border: 1px solid #bbb;
+            cursor: pointer;
+            user-select: none;
         }
     </style>
 </head>
@@ -70,6 +101,34 @@
         <div class="board__tile"></div>
         <div class="board__tile"></div>
         <div class="board__tile"></div>
+    </div>
+    <div class="keyboard">
+        <span class="keyboard__key">A</span>
+        <span class="keyboard__key">B</span>
+        <span class="keyboard__key">C</span>
+        <span class="keyboard__key">D</span>
+        <span class="keyboard__key">E</span>
+        <span class="keyboard__key">F</span>
+        <span class="keyboard__key">G</span>
+        <span class="keyboard__key">H</span>
+        <span class="keyboard__key">I</span>
+        <span class="keyboard__key">J</span>
+        <span class="keyboard__key">K</span>
+        <span class="keyboard__key">L</span>
+        <span class="keyboard__key">M</span>
+        <span class="keyboard__key">N</span>
+        <span class="keyboard__key">O</span>
+        <span class="keyboard__key">P</span>
+        <span class="keyboard__key">Q</span>
+        <span class="keyboard__key">R</span>
+        <span class="keyboard__key">S</span>
+        <span class="keyboard__key">T</span>
+        <span class="keyboard__key">U</span>
+        <span class="keyboard__key">V</span>
+        <span class="keyboard__key">W</span>
+        <span class="keyboard__key">X</span>
+        <span class="keyboard__key">Y</span>
+        <span class="keyboard__key">Z</span>
     </div>
 </body>
 
